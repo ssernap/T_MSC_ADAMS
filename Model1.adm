@@ -1,0 +1,1375 @@
+SOLIDWORKS Motion Mechanism
+!
+!-------------------------------- SYSTEM UNITS ---------------------------------
+!
+UNITS/
+, FORCE = NEWTON
+, MASS = KILOGRAM
+, LENGTH = METER
+, TIME = SECOND
+!
+!----------------------------------- PARTS -------------------------------------
+!
+!----------------------------------- Ground ------------------------------------
+!
+!Mechanism simTime 5
+!Mechanism simFrames 125
+!                            adams_view_name='ground'
+PART/1
+, GROUND
+!
+!                           adams_view_name='MARKER_1'
+MARKER/1
+, PART = 1
+, QP = 0.0567920913, 0.0278012297, 0.02225
+, REULER = 180D, 180D, 0D
+!
+!                           adams_view_name='MARKER_3'
+MARKER/3
+, PART = 1
+, QP = -0.0567298974, 0.0203073462, 0.0434346004
+, REULER = 93.77676471D, 60D, -91.89043586D
+!
+!                           adams_view_name='MARKER_5'
+MARKER/5
+, PART = 1
+, QP = -0.0182754617, 0.0228458241, -0.0656846004
+, REULER = -86.22323529D, 60D, 88.10956414D
+!
+!                           adams_view_name='MARKER_7'
+MARKER/7
+, PART = 1
+, QP = -0.0287156173, 0.0100804157, -0.0591846004
+, REULER = -86.22323529D, 60D, 88.10956414D
+!
+!                           adams_view_name='MARKER_9'
+MARKER/9
+, PART = 1
+, QP = 0.0575858158, 0.0157773991, 0.00925
+, REULER = 180D, 180D, 0D
+!
+!                          adams_view_name='MARKER_11'
+MARKER/11
+, PART = 1
+, QP = -0.0447022928, 0.0090250934, 0.0499346004
+, REULER = 93.77676471D, 60D, -91.89043586D
+!
+!                          adams_view_name='MARKER_40'
+MARKER/40
+, PART = 1
+, QP = -0.0567298974, 0.0203073462, 0.0434346004
+, REULER = 93.77676471D, 60D, -91.89043586D
+!
+!                          adams_view_name='MARKER_42'
+MARKER/42
+, PART = 1
+, QP = 0.0567920913, 0.0278012297, 0.02225
+, REULER = 180D, 180D, 0D
+!
+!                          adams_view_name='MARKER_44'
+MARKER/44
+, PART = 1
+, QP = -0.0182754617, 0.0228458241, -0.0656846004
+, REULER = -86.22323529D, 60D, 88.10956414D
+!
+!                    adams_view_name='BaseCompleta-1_Origin'
+MARKER/10002
+, PART = 1
+, REULER = 3.776764713D, 90D, 0D
+!
+!                           adams_view_name='_Origin'
+MARKER/10019
+, PART = 1
+!
+!                         adams_view_name='MARKER_10027'
+MARKER/10027
+, PART = 1
+, REULER = 3.776764713D, 90D, 0D
+!
+!                         adams_view_name='MARKER_10028'
+MARKER/10028
+, PART = 1
+, REULER = 3.776764713D, 90D, 0D
+!
+!                         adams_view_name='MARKER_10029'
+MARKER/10029
+, PART = 1
+, REULER = 3.776764713D, 90D, 0D
+!
+!                         adams_view_name='MARKER_10030'
+MARKER/10030
+, PART = 1
+, REULER = 3.776764713D, 90D, 0D
+!
+!                         adams_view_name='MARKER_10031'
+MARKER/10031
+, PART = 1
+, REULER = 3.776764713D, 90D, 0D
+!
+!                         adams_view_name='MARKER_10032'
+MARKER/10032
+, PART = 1
+, REULER = 3.776764713D, 90D, 0D
+!
+!                         adams_view_name='MARKER_10033'
+MARKER/10033
+, PART = 1
+, REULER = 3.776764713D, 90D, 0D
+!
+!                 adams_view_name='BaseCompleta_1_graphic_body1'
+GRAPHICS/11
+, EXTERNAL
+, RM = 10027
+, FILE = RDtoADAMS_SW_part28_solid1.xmt_bin
+!
+!                 adams_view_name='BaseCompleta_1_graphic_body2'
+GRAPHICS/13
+, EXTERNAL
+, RM = 10028
+, FILE = RDtoADAMS_SW_part28_solid2.xmt_bin
+!
+!                 adams_view_name='BaseCompleta_1_graphic_body3'
+GRAPHICS/15
+, EXTERNAL
+, RM = 10029
+, FILE = RDtoADAMS_SW_part28_solid3.xmt_bin
+!
+!                 adams_view_name='BaseCompleta_1_graphic_body4'
+GRAPHICS/17
+, EXTERNAL
+, RM = 10030
+, FILE = RDtoADAMS_SW_part28_solid4.xmt_bin
+!
+!                 adams_view_name='BaseCompleta_1_graphic_body5'
+GRAPHICS/19
+, EXTERNAL
+, RM = 10031
+, FILE = RDtoADAMS_SW_part28_solid5.xmt_bin
+!
+!                 adams_view_name='BaseCompleta_1_graphic_body6'
+GRAPHICS/21
+, EXTERNAL
+, RM = 10032
+, FILE = RDtoADAMS_SW_part28_solid6.xmt_bin
+!
+!                 adams_view_name='BaseCompleta_1_graphic_body7'
+GRAPHICS/23
+, EXTERNAL
+, RM = 10033
+, FILE = RDtoADAMS_SW_part28_solid7.xmt_bin
+!
+!------------------------------------ Part -------------------------------------
+!
+!                     adams_view_name='AntebrazoCompleto-4'
+PART/2
+, QG = -0.0120333789, -0.1022358907, 0.0601869842
+, REULER = 3.68543716D, 11.93784856D, 4.44605559D
+, MASS = 0.0298645778
+, CM = 10001
+, IP = 2.666969778E-004, 5.327502548E-007, 2.666199939E-004
+!
+!                          adams_view_name='MARKER_15'
+MARKER/15
+, PART = 2
+, QP = -0.0160892683, -0.2632410384, 0.0406493514
+, REULER = -8.212729286D, 0D, 0D
+!
+!                          adams_view_name='MARKER_38'
+MARKER/38
+, PART = 2
+, QP = -0.0160892683, 0.0117589616, 0.0406493514
+, REULER = 92.45233821D, 60.73164409D, -105.6071354D
+!
+!                  adams_view_name='AntebrazoCompleto-4_Origin'
+MARKER/10000
+, PART = 2
+!
+!                              adams_view_name='cm'
+MARKER/10001
+, PART = 2
+, QP = -0.0160892683, -0.1257410384, 0.0406493514
+!
+!                         adams_view_name='MARKER_10022'
+MARKER/10022
+, PART = 2
+, QP = -0.0108565269, -0.2102770089, 0.0367327533
+, REULER = -1.920065101D, 85.35272202D, -146.7215275D
+!
+!                         adams_view_name='MARKER_10023'
+MARKER/10023
+, PART = 2
+, QP = -0.005914062, -0.0628464016, 0.0247415868
+, REULER = 178.0799349D, 94.64727798D, -33.27847252D
+!
+!                         adams_view_name='MARKER_10024'
+MARKER/10024
+, PART = 2
+, QP = -0.0117915878, -0.238169286, 0.0390013524
+, REULER = 178.0799349D, 94.64727798D, -33.27847252D
+!
+!                         adams_view_name='MARKER_10025'
+MARKER/10025
+, PART = 2
+, QP = -0.0037934774, 4.092981288E-004, 0.0195967282
+, REULER = 179.5712171D, 4.648845665D, 178.5136217D
+!
+!                         adams_view_name='MARKER_10026'
+MARKER/10026
+, PART = 2
+, QP = -0.0129771115, -0.2735327087, 0.0418776119
+, REULER = 179.5712171D, 4.648845665D, -1.486378323D
+!
+!          adams_view_name='Acople_Antebrazo_RUniball_1_graphic_body1'
+GRAPHICS/2
+, EXTERNAL
+, RM = 10022
+, FILE = RDtoADAMS_SW_part66_solid1.xmt_bin
+!
+!          adams_view_name='Acople_Antebrazo_RUniball_2_graphic_body1'
+GRAPHICS/4
+, EXTERNAL
+, RM = 10023
+, FILE = RDtoADAMS_SW_part67_solid1.xmt_bin
+!
+!                  adams_view_name='Antebrazo_1_graphic_body1'
+GRAPHICS/6
+, EXTERNAL
+, RM = 10024
+, FILE = RDtoADAMS_SW_part68_solid1.xmt_bin
+!
+!                adams_view_name='uniball_Cuerpo_1_graphic_body1'
+GRAPHICS/8
+, EXTERNAL
+, RM = 10025
+, FILE = RDtoADAMS_SW_part69_solid1.xmt_bin
+!
+!                adams_view_name='uniball_Cuerpo_2_graphic_body1'
+GRAPHICS/10
+, EXTERNAL
+, RM = 10026
+, FILE = RDtoADAMS_SW_part70_solid1.xmt_bin
+!
+!------------------------------------ Part -------------------------------------
+!
+!                     adams_view_name='AntebrazoCompleto-3'
+PART/3
+, QG = -0.0536215763, -0.1049810628, 0.0361277367
+, REULER = 3.841356977D, 11.93538426D, 4.293507222D
+, MASS = 0.0298645778
+, CM = 10004
+, IP = 2.666969778E-004, 5.327502548E-007, 2.666199939E-004
+!
+!                          adams_view_name='MARKER_21'
+MARKER/21
+, PART = 3
+, QP = -0.0160892683, -0.2632410384, 0.0406493514
+, REULER = -8.219481153D, 0D, 0D
+!
+!                          adams_view_name='MARKER_36'
+MARKER/36
+, PART = 3
+, QP = -0.0160892683, 0.0117589616, 0.0406493514
+, REULER = 92.45311445D, 60.6993309D, -105.6087223D
+!
+!                  adams_view_name='AntebrazoCompleto-3_Origin'
+MARKER/10003
+, PART = 3
+!
+!                              adams_view_name='cm'
+MARKER/10004
+, PART = 3
+, QP = -0.0160892683, -0.1257410384, 0.0406493514
+!
+!                         adams_view_name='MARKER_10034'
+MARKER/10034
+, PART = 3
+, QP = -0.0108543168, -0.2102770089, 0.0367357078
+, REULER = -1.92269242D, 85.35380641D, -146.72133D
+!
+!                         adams_view_name='MARKER_10035'
+MARKER/10035
+, PART = 3
+, QP = -0.0059050838, -0.0628464016, 0.0247473331
+, REULER = 178.0773076D, 94.64619359D, -33.27866995D
+!
+!                         adams_view_name='MARKER_10036'
+MARKER/10036
+, PART = 3
+, QP = -0.0117906582, -0.238169286, 0.0390037787
+, REULER = 178.0773076D, 94.64619359D, -33.27866995D
+!
+!                         adams_view_name='MARKER_10037'
+MARKER/10037
+, PART = 3
+, QP = -0.0037815954, 4.092981288E-004, 0.0196036724
+, REULER = 179.5713727D, 4.647766765D, 178.5108457D
+!
+!                         adams_view_name='MARKER_10038'
+MARKER/10038
+, PART = 3
+, QP = -0.0129778053, -0.2735327087, 0.0418793685
+, REULER = 179.5713727D, 4.647766765D, -1.489154343D
+!
+!          adams_view_name='Acople_Antebrazo_RUniball_1_graphic_body1'
+GRAPHICS/25
+, EXTERNAL
+, RM = 10034
+, FILE = RDtoADAMS_SW_part60_solid1.xmt_bin
+!
+!          adams_view_name='Acople_Antebrazo_RUniball_2_graphic_body1'
+GRAPHICS/27
+, EXTERNAL
+, RM = 10035
+, FILE = RDtoADAMS_SW_part61_solid1.xmt_bin
+!
+!                  adams_view_name='Antebrazo_1_graphic_body1'
+GRAPHICS/29
+, EXTERNAL
+, RM = 10036
+, FILE = RDtoADAMS_SW_part62_solid1.xmt_bin
+!
+!                adams_view_name='uniball_Cuerpo_1_graphic_body1'
+GRAPHICS/31
+, EXTERNAL
+, RM = 10037
+, FILE = RDtoADAMS_SW_part63_solid1.xmt_bin
+!
+!                adams_view_name='uniball_Cuerpo_2_graphic_body1'
+GRAPHICS/33
+, EXTERNAL
+, RM = 10038
+, FILE = RDtoADAMS_SW_part64_solid1.xmt_bin
+!
+!------------------------------------ Part -------------------------------------
+!
+!                     adams_view_name='AntebrazoCompleto-6'
+PART/4
+, QG = -0.0512067966, -0.1233242747, -0.112955349
+, REULER = -177.2031563D, 12.92826782D, -174.9932959D
+, MASS = 0.0298645778
+, CM = 10006
+, IP = 2.666969778E-004, 5.327502548E-007, 2.666199939E-004
+!
+!                          adams_view_name='MARKER_23'
+MARKER/23
+, PART = 4
+, QP = -0.0160892683, -0.2632410384, 0.0406493514
+, REULER = -7.876169136D, 0D, 0D
+!
+!                          adams_view_name='MARKER_28'
+MARKER/28
+, PART = 4
+, QP = -0.0160892683, 0.0117589616, 0.0406493514
+, REULER = -86.70800807D, 61.05224918D, 73.29821703D
+!
+!                  adams_view_name='AntebrazoCompleto-6_Origin'
+MARKER/10005
+, PART = 4
+!
+!                              adams_view_name='cm'
+MARKER/10006
+, PART = 4
+, QP = -0.0160892683, -0.1257410384, 0.0406493514
+!
+!                         adams_view_name='MARKER_10039'
+MARKER/10039
+, PART = 4
+, QP = -0.0107687768, -0.2098879887, 0.0431616635
+, REULER = -1.914400468D, 95.05696977D, -146.9708553D
+!
+!                         adams_view_name='MARKER_10040'
+MARKER/10040
+, PART = 4
+, QP = -0.0058438782, -0.0625463563, 0.056207305
+, REULER = 178.0855995D, 84.94303023D, -33.02914465D
+!
+!                         adams_view_name='MARKER_10041'
+MARKER/10041
+, PART = 4
+, QP = -0.0117005144, -0.2377634326, 0.0406935692
+, REULER = 178.0855995D, 84.94303023D, -33.02914465D
+!
+!                         adams_view_name='MARKER_10042'
+MARKER/10042
+, PART = 4
+, QP = -0.0037308305, 6.71168322E-004, 0.0618045903
+, REULER = -0.457191124D, 5.058597252D, -1.451536007D
+!
+!                         adams_view_name='MARKER_10043'
+MARKER/10043
+, PART = 4
+, QP = -0.0128818246, -0.2731055133, 0.0375643782
+, REULER = -0.457191124D, 5.058597252D, 178.548464D
+!
+!          adams_view_name='Acople_Antebrazo_RUniball_1_graphic_body1'
+GRAPHICS/35
+, EXTERNAL
+, RM = 10039
+, FILE = RDtoADAMS_SW_part23_solid1.xmt_bin
+!
+!          adams_view_name='Acople_Antebrazo_RUniball_2_graphic_body1'
+GRAPHICS/37
+, EXTERNAL
+, RM = 10040
+, FILE = RDtoADAMS_SW_part24_solid1.xmt_bin
+!
+!                  adams_view_name='Antebrazo_1_graphic_body1'
+GRAPHICS/39
+, EXTERNAL
+, RM = 10041
+, FILE = RDtoADAMS_SW_part25_solid1.xmt_bin
+!
+!                adams_view_name='uniball_Cuerpo_1_graphic_body1'
+GRAPHICS/41
+, EXTERNAL
+, RM = 10042
+, FILE = RDtoADAMS_SW_part26_solid1.xmt_bin
+!
+!                adams_view_name='uniball_Cuerpo_2_graphic_body1'
+GRAPHICS/43
+, EXTERNAL
+, RM = 10043
+, FILE = RDtoADAMS_SW_part27_solid1.xmt_bin
+!
+!------------------------------------ Part -------------------------------------
+!
+!                     adams_view_name='AntebrazoCompleto-2'
+PART/5
+, QG = 0.1086934515, -0.1116109813, -0.0645230601
+, REULER = 175.5783035D, 0.7255901636D, 172.8752875D
+, MASS = 0.0298645778
+, CM = 10008
+, IP = 2.666969778E-004, 5.327502548E-007, 2.666199939E-004
+!
+!                          adams_view_name='MARKER_19'
+MARKER/19
+, PART = 5
+, QP = -0.0160892683, -0.2632410384, 0.0406493514
+, REULER = 11.54676224D, 0D, 0D
+!
+!                          adams_view_name='MARKER_32'
+MARKER/32
+, PART = 5
+, QP = -0.0160892683, 0.0117589616, 0.0406493514
+, REULER = -172.8752875D, 179.2744098D, -4.421696517D
+!
+!                  adams_view_name='AntebrazoCompleto-2_Origin'
+MARKER/10007
+, PART = 5
+!
+!                              adams_view_name='cm'
+MARKER/10008
+, PART = 5
+, QP = -0.0160892683, -0.1257410384, 0.0406493514
+!
+!                         adams_view_name='MARKER_10044'
+MARKER/10044
+, PART = 5
+, QP = -0.0168862152, -0.2088180767, 0.0398667318
+, REULER = 6.511699293D, 90.18700853D, -146.8136616D
+!
+!                         adams_view_name='MARKER_10045'
+MARKER/10045
+, PART = 5
+, QP = -0.0336702271, -0.0617736494, 0.0403497903
+, REULER = -173.4883007D, 89.81299147D, -33.18633842D
+!
+!                         adams_view_name='MARKER_10046'
+MARKER/10046
+, PART = 5
+, QP = -0.0137108616, -0.2366372927, 0.0397753424
+, REULER = -173.4883007D, 89.81299147D, -33.18633842D
+!
+!                         adams_view_name='MARKER_10047'
+MARKER/10047
+, PART = 5
+, QP = -0.0408714755, 0.0013163582, 0.0405570486
+, REULER = -2.218983926D, 0.1892008381D, 8.730636352D
+!
+!                         adams_view_name='MARKER_10048'
+MARKER/10048
+, PART = 5
+, QP = -0.0096849669, -0.2719080844, 0.0396594736
+, REULER = -2.218983926D, 0.1892008381D, -171.2693636D
+!
+!          adams_view_name='Acople_Antebrazo_RUniball_1_graphic_body1'
+GRAPHICS/45
+, EXTERNAL
+, RM = 10044
+, FILE = RDtoADAMS_SW_part54_solid1.xmt_bin
+!
+!          adams_view_name='Acople_Antebrazo_RUniball_2_graphic_body1'
+GRAPHICS/47
+, EXTERNAL
+, RM = 10045
+, FILE = RDtoADAMS_SW_part55_solid1.xmt_bin
+!
+!                  adams_view_name='Antebrazo_1_graphic_body1'
+GRAPHICS/49
+, EXTERNAL
+, RM = 10046
+, FILE = RDtoADAMS_SW_part56_solid1.xmt_bin
+!
+!                adams_view_name='uniball_Cuerpo_1_graphic_body1'
+GRAPHICS/51
+, EXTERNAL
+, RM = 10047
+, FILE = RDtoADAMS_SW_part57_solid1.xmt_bin
+!
+!                adams_view_name='uniball_Cuerpo_2_graphic_body1'
+GRAPHICS/53
+, EXTERNAL
+, RM = 10048
+, FILE = RDtoADAMS_SW_part58_solid1.xmt_bin
+!
+!------------------------------------ Part -------------------------------------
+!
+!                     adams_view_name='BaseMovilCompleta-1'
+PART/6
+, QG = 0.0050267882, -0.4479756806, -0.0024863061
+, REULER = -176.2232353D, 90D, 60D
+, MASS = 0.0612141757
+, CM = 10010
+, IP = 4.010262579E-005, 4.01024004E-005, 7.860765267E-005
+!
+!                          adams_view_name='MARKER_16'
+MARKER/16
+, PART = 6
+, QP = 0.0366349369, 0.0323420616, 0.0797046564
+, REULER = 119.9806913D, 101.9378332D, -3.860020089D
+!
+!                          adams_view_name='MARKER_18'
+MARKER/18
+, PART = 6
+, QP = 0.0056778632, 0.0501494641, 0.0797046564
+, REULER = 120.0475261D, 89.26649606D, -3.777074675D
+!
+!                          adams_view_name='MARKER_20'
+MARKER/20
+, PART = 6
+, QP = -0.0359779587, 0.0260994641, 0.0797046564
+, REULER = 120.1034763D, 89.28182571D, -3.777060051D
+!
+!                          adams_view_name='MARKER_22'
+MARKER/22
+, PART = 6
+, QP = 0.0366349369, -0.0157579384, 0.0797046564
+, REULER = 120.0136534D, 101.9353766D, -3.859954421D
+!
+!                          adams_view_name='MARKER_24'
+MARKER/24
+, PART = 6
+, QP = 0.0057347371, -0.0336638494, 0.0797046564
+, REULER = 120.2249286D, 77.07365569D, -3.874866956D
+!
+!                          adams_view_name='MARKER_26'
+MARKER/26
+, PART = 6
+, QP = -0.0359210849, -0.0096138494, 0.0797046564
+, REULER = 120.4516472D, 77.05829748D, -3.87524671D
+!
+!                  adams_view_name='BaseMovilCompleta-1_Origin'
+MARKER/10009
+, PART = 6
+!
+!                              adams_view_name='cm'
+MARKER/10010
+, PART = 6
+, QP = 0.0021304285, 0.0082582162, 0.0786516829
+!
+!                         adams_view_name='MARKER_10049'
+MARKER/10049
+, PART = 6
+, QP = -5.615105355E-004, 0.0112207836, 0.060641636
+!
+!                         adams_view_name='MARKER_10050'
+MARKER/10050
+, PART = 6
+, QP = 0.0339384895, -0.0128292164, 0.069641636
+, REULER = 0D, 90D, 0D
+!
+!                         adams_view_name='MARKER_10051'
+MARKER/10051
+, PART = 6
+, QP = 0.0339384895, 0.0389707836, 0.069641636
+, REULER = 0D, 90D, 0D
+!
+!                         adams_view_name='MARKER_10052'
+MARKER/10052
+, PART = 6
+, QP = 0.0339384895, 0.0352707836, 0.069641636
+, REULER = 0D, 90D, 0D
+!
+!                         adams_view_name='MARKER_10053'
+MARKER/10053
+, PART = 6
+, QP = -0.0386744061, 0.0290281862, 0.069641636
+, REULER = -60D, 90D, 0D
+!
+!                         adams_view_name='MARKER_10054'
+MARKER/10054
+, PART = 6
+, QP = 0.0061857098, 0.0549281862, 0.069641636
+, REULER = -60D, 90D, 0D
+!
+!                         adams_view_name='MARKER_10055'
+MARKER/10055
+, PART = 6
+, QP = 0.0029814158, 0.0530781862, 0.069641636
+, REULER = -60D, 90D, 0D
+!
+!                         adams_view_name='MARKER_10056'
+MARKER/10056
+, PART = 6
+, QP = 0.0030382897, -0.0307351273, 0.069641636
+, REULER = 60D, 90D, 0D
+!
+!                         adams_view_name='MARKER_10057'
+MARKER/10057
+, PART = 6
+, QP = -0.0418218262, -0.0048351273, 0.069641636
+, REULER = 60D, 90D, 0D
+!
+!                         adams_view_name='MARKER_10058'
+MARKER/10058
+, PART = 6
+, QP = -0.0386175323, -0.0066851273, 0.069641636
+, REULER = 60D, 90D, 0D
+!
+!                  adams_view_name='BaseMovil_1_graphic_body1'
+GRAPHICS/55
+, EXTERNAL
+, RM = 10049
+, FILE = RDtoADAMS_SW_part3_solid1.xmt_bin
+!
+!                 adams_view_name='ball_Uniball_1_graphic_body1'
+GRAPHICS/57
+, EXTERNAL
+, RM = 10050
+, FILE = RDtoADAMS_SW_part5_solid1.xmt_bin
+!
+!          adams_view_name='Acople_RUniball_BaseMovil_1_graphic_body1'
+GRAPHICS/59
+, EXTERNAL
+, RM = 10051
+, FILE = RDtoADAMS_SW_part6_solid1.xmt_bin
+!
+!                 adams_view_name='ball_Uniball_2_graphic_body1'
+GRAPHICS/61
+, EXTERNAL
+, RM = 10052
+, FILE = RDtoADAMS_SW_part7_solid1.xmt_bin
+!
+!                adams_view_name='ball_Uniball_1_graphic_body1_2'
+GRAPHICS/63
+, EXTERNAL
+, RM = 10053
+, FILE = RDtoADAMS_SW_part9_solid1.xmt_bin
+!
+!         adams_view_name='Acople_RUniball_BaseMovil_1_graphic_body1_2'
+GRAPHICS/65
+, EXTERNAL
+, RM = 10054
+, FILE = RDtoADAMS_SW_part10_solid1.xmt_bin
+!
+!                adams_view_name='ball_Uniball_2_graphic_body1_2'
+GRAPHICS/67
+, EXTERNAL
+, RM = 10055
+, FILE = RDtoADAMS_SW_part11_solid1.xmt_bin
+!
+!                adams_view_name='ball_Uniball_1_graphic_body1_3'
+GRAPHICS/69
+, EXTERNAL
+, RM = 10056
+, FILE = RDtoADAMS_SW_part13_solid1.xmt_bin
+!
+!         adams_view_name='Acople_RUniball_BaseMovil_1_graphic_body1_3'
+GRAPHICS/71
+, EXTERNAL
+, RM = 10057
+, FILE = RDtoADAMS_SW_part14_solid1.xmt_bin
+!
+!                adams_view_name='ball_Uniball_2_graphic_body1_3'
+GRAPHICS/73
+, EXTERNAL
+, RM = 10058
+, FILE = RDtoADAMS_SW_part15_solid1.xmt_bin
+!
+!------------------------------------ Part -------------------------------------
+!
+!                     adams_view_name='AntebrazoCompleto-5'
+PART/7
+, QG = -0.009796591, -0.1206152738, -0.1370626048
+, REULER = -178.1878649D, 12.94944664D, -174.0335882D
+, MASS = 0.0298645778
+, CM = 10012
+, IP = 2.666969778E-004, 5.327502548E-007, 2.666199939E-004
+!
+!                          adams_view_name='MARKER_25'
+MARKER/25
+, PART = 7
+, QP = -0.0160892683, -0.2632410384, 0.0406493514
+, REULER = -7.825802663D, 0D, 0D
+!
+!                          adams_view_name='MARKER_30'
+MARKER/30
+, PART = 7
+, QP = -0.0160892683, 0.0117589616, 0.0406493514
+, REULER = -86.715004D, 61.27338387D, 73.31272168D
+!
+!                  adams_view_name='AntebrazoCompleto-5_Origin'
+MARKER/10011
+, PART = 7
+!
+!                              adams_view_name='cm'
+MARKER/10012
+, PART = 7
+, QP = -0.0160892683, -0.1257410384, 0.0406493514
+!
+!                         adams_view_name='MARKER_10059'
+MARKER/10059
+, PART = 7
+, QP = -0.0107785289, -0.2098879887, 0.0431822132
+, REULER = -1.894796306D, 95.0643314D, -146.9692959D
+!
+!                         adams_view_name='MARKER_10060'
+MARKER/10060
+, PART = 7
+, QP = -0.0059041, -0.0625463563, 0.0562467962
+, REULER = 178.1052037D, 84.9356686D, -33.03070414D
+!
+!                         adams_view_name='MARKER_10061'
+MARKER/10061
+, PART = 7
+, QP = -0.0117007181, -0.2377634326, 0.0407105353
+, REULER = 178.1052037D, 84.9356686D, -33.03070414D
+!
+!                         adams_view_name='MARKER_10062'
+MARKER/10062
+, PART = 7
+, QP = -0.0038127066, 6.71168322E-004, 0.0618522085
+, REULER = -0.4573540471D, 5.065917297D, -1.431829618D
+!
+!                         adams_view_name='MARKER_10063'
+MARKER/10063
+, PART = 7
+, QP = -0.0128699224, -0.2731055133, 0.0375768009
+, REULER = -0.4573540471D, 5.065917297D, 178.5681704D
+!
+!          adams_view_name='Acople_Antebrazo_RUniball_1_graphic_body1'
+GRAPHICS/75
+, EXTERNAL
+, RM = 10059
+, FILE = RDtoADAMS_SW_part17_solid1.xmt_bin
+!
+!          adams_view_name='Acople_Antebrazo_RUniball_2_graphic_body1'
+GRAPHICS/77
+, EXTERNAL
+, RM = 10060
+, FILE = RDtoADAMS_SW_part18_solid1.xmt_bin
+!
+!                  adams_view_name='Antebrazo_1_graphic_body1'
+GRAPHICS/79
+, EXTERNAL
+, RM = 10061
+, FILE = RDtoADAMS_SW_part19_solid1.xmt_bin
+!
+!                adams_view_name='uniball_Cuerpo_1_graphic_body1'
+GRAPHICS/81
+, EXTERNAL
+, RM = 10062
+, FILE = RDtoADAMS_SW_part20_solid1.xmt_bin
+!
+!                adams_view_name='uniball_Cuerpo_2_graphic_body1'
+GRAPHICS/83
+, EXTERNAL
+, RM = 10063
+, FILE = RDtoADAMS_SW_part21_solid1.xmt_bin
+!
+!------------------------------------ Part -------------------------------------
+!
+!                     adams_view_name='AntebrazoCompleto-1'
+PART/8
+, QG = 0.1087337811, -0.1116190109, -0.0164066867
+, REULER = -179.9302281D, 0.7350419245D, 168.3841835D
+, MASS = 0.0298645778
+, CM = 10014
+, IP = 2.666969778E-004, 5.327502548E-007, 2.666199939E-004
+!
+!                          adams_view_name='MARKER_17'
+MARKER/17
+, PART = 8
+, QP = -0.0160892683, -0.2632410384, 0.0406493514
+, REULER = 11.54603884D, 0D, 0D
+!
+!                          adams_view_name='MARKER_34'
+MARKER/34
+, PART = 8
+, QP = -0.0160892683, 0.0117589616, 0.0406493514
+, REULER = -168.3841835D, 179.2649581D, 0.0697719282D
+!
+!                  adams_view_name='AntebrazoCompleto-1_Origin'
+MARKER/10013
+, PART = 8
+!
+!                              adams_view_name='cm'
+MARKER/10014
+, PART = 8
+, QP = -0.0160892683, -0.1257410384, 0.0406493514
+!
+!                         adams_view_name='MARKER_10064'
+MARKER/10064
+, PART = 8
+, QP = -0.0168870072, -0.2088180767, 0.0398675391
+, REULER = 6.511507872D, 90.19358689D, -146.8128273D
+!
+!                         adams_view_name='MARKER_10065'
+MARKER/10065
+, PART = 8
+, QP = -0.0336705214, -0.0617736494, 0.04036759
+, REULER = -173.4884921D, 89.80641311D, -33.18717273D
+!
+!                         adams_view_name='MARKER_10066'
+MARKER/10066
+, PART = 8
+, QP = -0.0137117477, -0.2366372927, 0.0397729349
+, REULER = -173.4884921D, 89.80641311D, -33.18717273D
+!
+!                         adams_view_name='MARKER_10067'
+MARKER/10067
+, PART = 8
+, QP = -0.0408715563, 0.0013163582, 0.0405821388
+, REULER = -2.168303034D, 0.1958296895D, 8.679760981D
+!
+!                         adams_view_name='MARKER_10068'
+MARKER/10068
+, PART = 8
+, QP = -0.0096859723, -0.2719080844, 0.0396529902
+, REULER = -2.168303034D, 0.1958296895D, -171.320239D
+!
+!          adams_view_name='Acople_Antebrazo_RUniball_1_graphic_body1'
+GRAPHICS/85
+, EXTERNAL
+, RM = 10064
+, FILE = RDtoADAMS_SW_part48_solid1.xmt_bin
+!
+!          adams_view_name='Acople_Antebrazo_RUniball_2_graphic_body1'
+GRAPHICS/87
+, EXTERNAL
+, RM = 10065
+, FILE = RDtoADAMS_SW_part49_solid1.xmt_bin
+!
+!                  adams_view_name='Antebrazo_1_graphic_body1'
+GRAPHICS/89
+, EXTERNAL
+, RM = 10066
+, FILE = RDtoADAMS_SW_part50_solid1.xmt_bin
+!
+!                adams_view_name='uniball_Cuerpo_1_graphic_body1'
+GRAPHICS/91
+, EXTERNAL
+, RM = 10067
+, FILE = RDtoADAMS_SW_part51_solid1.xmt_bin
+!
+!                adams_view_name='uniball_Cuerpo_2_graphic_body1'
+GRAPHICS/93
+, EXTERNAL
+, RM = 10068
+, FILE = RDtoADAMS_SW_part52_solid1.xmt_bin
+!
+!------------------------------------ Part -------------------------------------
+!
+!                       adams_view_name='BrazoCompleto-3'
+PART/9
+, QG = -0.0477591247, -0.1005788217, -0.0798222798
+, REULER = -86.22323529D, 60D, 72.89763353D
+, MASS = 0.060091433
+, CM = 10016
+, IP = 1.77277257E-004, 9.809596342E-006, 1.698291199E-004
+!
+!                           adams_view_name='MARKER_6'
+MARKER/6
+, PART = 9
+, QP = -0.006, 0.124976402, -0.01245
+, REULER = 15.2119306D, 0D, 0D
+!
+!                           adams_view_name='MARKER_8'
+MARKER/8
+, PART = 9
+, QP = -0.0024563384, 0.1134592425, -0.01245
+, REULER = 15.2119306D, 0D, 0D
+!
+!                          adams_view_name='MARKER_27'
+MARKER/27
+, PART = 9
+, QP = -0.006, -0.005023598, 0.02085
+, REULER = 15.2119306D, 0D, 0D
+!
+!                          adams_view_name='MARKER_29'
+MARKER/29
+, PART = 9
+, QP = -0.006, -0.005023598, -0.02725
+, REULER = 15.2119306D, 0D, 0D
+!
+!                          adams_view_name='MARKER_43'
+MARKER/43
+, PART = 9
+, QP = -0.006, 0.124976402, -0.02545
+, REULER = 15.2119306D, 0D, 0D
+!
+!                    adams_view_name='BrazoCompleto-3_Origin'
+MARKER/10015
+, PART = 9
+!
+!                              adams_view_name='cm'
+MARKER/10016
+, PART = 9
+, QP = -0.0059999998, 0.0435921258, -0.0034680425
+, REULER = 180D, 0.2106712311D, 180D
+!
+!                         adams_view_name='MARKER_10069'
+MARKER/10069
+, PART = 9
+, QP = 0.0207484021, -0.0022420047, -0.02725
+, REULER = -168.1261869D, 180D, 0D
+!
+!                         adams_view_name='MARKER_10070'
+MARKER/10070
+, PART = 9
+, QP = 0.0207484021, -0.0022420047, 0.02085
+, REULER = -10.64886044D, 0D, 0D
+!
+!                         adams_view_name='MARKER_10071'
+MARKER/10071
+, PART = 9
+, QP = 0.0207484021, -0.0022420047, 0.02455
+, REULER = -168.1261869D, 180D, 0D
+!
+!                         adams_view_name='MARKER_10072'
+MARKER/10072
+, PART = 9
+, QP = 0.0104912518, 0.046542155, -3.878841692E-015
+, REULER = -168.1261869D, 180D, 0D
+!
+!                         adams_view_name='MARKER_10073'
+MARKER/10073
+, PART = 9
+, QP = -0.006, 0.124976402, 0.02605
+, REULER = -168.1261869D, 180D, 0D
+!
+!                 adams_view_name='ball_Uniball_2_graphic_body1'
+GRAPHICS/95
+, EXTERNAL
+, RM = 10069
+, FILE = RDtoADAMS_SW_part42_solid1.xmt_bin
+!
+!                 adams_view_name='ball_Uniball_1_graphic_body1'
+GRAPHICS/97
+, EXTERNAL
+, RM = 10070
+, FILE = RDtoADAMS_SW_part43_solid1.xmt_bin
+!
+!            adams_view_name='Acople_Brazo_RUniball_1_graphic_body1'
+GRAPHICS/99
+, EXTERNAL
+, RM = 10071
+, FILE = RDtoADAMS_SW_part44_solid1.xmt_bin
+!
+!                    adams_view_name='Brazo_1_graphic_body1'
+GRAPHICS/101
+, EXTERNAL
+, RM = 10072
+, FILE = RDtoADAMS_SW_part45_solid1.xmt_bin
+!
+!                adams_view_name='Eje_Base_Brazo_1_graphic_body1'
+GRAPHICS/103
+, EXTERNAL
+, RM = 10073
+, FILE = RDtoADAMS_SW_part46_solid1.xmt_bin
+!
+!------------------------------------ Part -------------------------------------
+!
+!                       adams_view_name='BrazoCompleto-2'
+PART/10
+, QG = 0.0881037251, -0.0933378748, -0.0032
+, REULER = -162.758961D, 180D, 0D
+, MASS = 0.060091433
+, CM = 10018
+, IP = 1.77277257E-004, 9.809596342E-006, 1.698291199E-004
+!
+!                           adams_view_name='MARKER_2'
+MARKER/2
+, PART = 10
+, QP = -0.006, 0.124976402, -0.01245
+, REULER = 17.24103902D, 0D, 0D
+!
+!                          adams_view_name='MARKER_10'
+MARKER/10
+, PART = 10
+, QP = -0.0031942899, 0.1132575927, -0.01245
+, REULER = 17.24103902D, 0D, 0D
+!
+!                          adams_view_name='MARKER_31'
+MARKER/31
+, PART = 10
+, QP = -0.006, -0.005023598, 0.02085
+, REULER = 17.24103902D, 0D, 0D
+!
+!                          adams_view_name='MARKER_33'
+MARKER/33
+, PART = 10
+, QP = -0.006, -0.005023598, -0.02725
+, REULER = 17.24103902D, 0D, 0D
+!
+!                          adams_view_name='MARKER_41'
+MARKER/41
+, PART = 10
+, QP = -0.006, 0.124976402, -0.02545
+, REULER = 17.24103902D, 0D, 0D
+!
+!                    adams_view_name='BrazoCompleto-2_Origin'
+MARKER/10017
+, PART = 10
+!
+!                              adams_view_name='cm'
+MARKER/10018
+, PART = 10
+, QP = -0.0059999998, 0.0435921258, -0.0034680425
+, REULER = 180D, 0.2106712311D, 180D
+!
+!                         adams_view_name='MARKER_10074'
+MARKER/10074
+, PART = 10
+, QP = 0.0207484021, -0.0022420047, -0.02725
+, REULER = -168.1261869D, 180D, 0D
+!
+!                         adams_view_name='MARKER_10075'
+MARKER/10075
+, PART = 10
+, QP = 0.0207484021, -0.0022420047, 0.02085
+, REULER = -10.64886044D, 0D, 0D
+!
+!                         adams_view_name='MARKER_10076'
+MARKER/10076
+, PART = 10
+, QP = 0.0207484021, -0.0022420047, 0.02455
+, REULER = -168.1261869D, 180D, 0D
+!
+!                         adams_view_name='MARKER_10077'
+MARKER/10077
+, PART = 10
+, QP = 0.0104912518, 0.046542155, 0
+, REULER = -168.1261869D, 180D, 0D
+!
+!                         adams_view_name='MARKER_10078'
+MARKER/10078
+, PART = 10
+, QP = -0.006, 0.124976402, 0.02605
+, REULER = -168.1261869D, 180D, 0D
+!
+!                 adams_view_name='ball_Uniball_2_graphic_body1'
+GRAPHICS/105
+, EXTERNAL
+, RM = 10074
+, FILE = RDtoADAMS_SW_part36_solid1.xmt_bin
+!
+!                 adams_view_name='ball_Uniball_1_graphic_body1'
+GRAPHICS/107
+, EXTERNAL
+, RM = 10075
+, FILE = RDtoADAMS_SW_part37_solid1.xmt_bin
+!
+!            adams_view_name='Acople_Brazo_RUniball_1_graphic_body1'
+GRAPHICS/109
+, EXTERNAL
+, RM = 10076
+, FILE = RDtoADAMS_SW_part38_solid1.xmt_bin
+!
+!                    adams_view_name='Brazo_1_graphic_body1'
+GRAPHICS/111
+, EXTERNAL
+, RM = 10077
+, FILE = RDtoADAMS_SW_part39_solid1.xmt_bin
+!
+!                adams_view_name='Eje_Base_Brazo_1_graphic_body1'
+GRAPHICS/113
+, EXTERNAL
+, RM = 10078
+, FILE = RDtoADAMS_SW_part40_solid1.xmt_bin
+!
+!------------------------------------ Part -------------------------------------
+!
+!                       adams_view_name='BrazoCompleto-1'
+PART/11
+, QG = -0.0436441248, -0.0995711624, 0.0853954069
+, REULER = 93.77676471D, 60D, -108.4015107D
+, MASS = 0.060091433
+, CM = 10021
+, IP = 1.77277257E-004, 9.809596342E-006, 1.698291199E-004
+!
+!                           adams_view_name='MARKER_4'
+MARKER/4
+, PART = 11
+, QP = -0.006, 0.124976402, -0.01245
+, REULER = 16.51107483D, 0D, 0D
+!
+!                          adams_view_name='MARKER_12'
+MARKER/12
+, PART = 11
+, QP = -0.0021961276, 0.1135425463, -0.01245
+, REULER = 16.51107483D, 0D, 0D
+!
+!                          adams_view_name='MARKER_35'
+MARKER/35
+, PART = 11
+, QP = -0.006, -0.005023598, -0.02725
+, REULER = 16.51107483D, 0D, 0D
+!
+!                          adams_view_name='MARKER_37'
+MARKER/37
+, PART = 11
+, QP = -0.006, -0.005023598, 0.02085
+, REULER = 16.51107483D, 0D, 0D
+!
+!                          adams_view_name='MARKER_39'
+MARKER/39
+, PART = 11
+, QP = -0.006, 0.124976402, -0.02545
+, REULER = 16.51107483D, 0D, 0D
+!
+!                    adams_view_name='BrazoCompleto-1_Origin'
+MARKER/10020
+, PART = 11
+!
+!                              adams_view_name='cm'
+MARKER/10021
+, PART = 11
+, QP = -0.0059999998, 0.0435921258, -0.0034680425
+, REULER = 180D, 0.2106712311D, 180D
+!
+!                         adams_view_name='MARKER_10079'
+MARKER/10079
+, PART = 11
+, QP = 0.0207484021, -0.0022420047, -0.02725
+, REULER = -168.1261869D, 180D, 0D
+!
+!                         adams_view_name='MARKER_10080'
+MARKER/10080
+, PART = 11
+, QP = 0.0207484021, -0.0022420047, 0.02085
+, REULER = -10.64886044D, 0D, 0D
+!
+!                         adams_view_name='MARKER_10081'
+MARKER/10081
+, PART = 11
+, QP = 0.0207484021, -0.0022420047, 0.02455
+, REULER = -168.1261869D, 180D, 0D
+!
+!                         adams_view_name='MARKER_10082'
+MARKER/10082
+, PART = 11
+, QP = 0.0104912518, 0.046542155, -3.851086117E-015
+, REULER = -168.1261869D, 180D, 0D
+!
+!                         adams_view_name='MARKER_10083'
+MARKER/10083
+, PART = 11
+, QP = -0.006, 0.124976402, 0.02605
+, REULER = -168.1261869D, 180D, 0D
+!
+!                 adams_view_name='ball_Uniball_2_graphic_body1'
+GRAPHICS/115
+, EXTERNAL
+, RM = 10079
+, FILE = RDtoADAMS_SW_part30_solid1.xmt_bin
+!
+!                 adams_view_name='ball_Uniball_1_graphic_body1'
+GRAPHICS/117
+, EXTERNAL
+, RM = 10080
+, FILE = RDtoADAMS_SW_part31_solid1.xmt_bin
+!
+!            adams_view_name='Acople_Brazo_RUniball_1_graphic_body1'
+GRAPHICS/119
+, EXTERNAL
+, RM = 10081
+, FILE = RDtoADAMS_SW_part32_solid1.xmt_bin
+!
+!                    adams_view_name='Brazo_1_graphic_body1'
+GRAPHICS/121
+, EXTERNAL
+, RM = 10082
+, FILE = RDtoADAMS_SW_part33_solid1.xmt_bin
+!
+!                adams_view_name='Eje_Base_Brazo_1_graphic_body1'
+GRAPHICS/123
+, EXTERNAL
+, RM = 10083
+, FILE = RDtoADAMS_SW_part34_solid1.xmt_bin
+!
+!-------------------------------- CONSTRAINTS ----------------------------------
+!
+!                         adams_view_name='Conc_ntrica8'
+JOINT/1
+, SPHERICAL
+, I = 29
+, J = 30
+!
+!                        adams_view_name='Conc_ntrica11'
+JOINT/2
+, SPHERICAL
+, I = 23
+, J = 24
+!
+!                        adams_view_name='Conc_ntrica14'
+JOINT/3
+, SPHERICAL
+, I = 17
+, J = 18
+!
+!                        adams_view_name='Coincidente11'
+JOINT/4
+, PLANAR
+, I = 11
+, J = 12
+!
+!                        adams_view_name='Conc_ntrica16'
+JOINT/5
+, CYLINDRICAL
+, I = 5
+, J = 6
+!
+!                         adams_view_name='Conc_ntrica6'
+JOINT/6
+, SPHERICAL
+, I = 33
+, J = 34
+!
+!                         adams_view_name='Conc_ntrica9'
+JOINT/7
+, SPHERICAL
+, I = 27
+, J = 28
+!
+!                        adams_view_name='Conc_ntrica12'
+JOINT/8
+, SPHERICAL
+, I = 21
+, J = 22
+!
+!                        adams_view_name='Conc_ntrica15'
+JOINT/9
+, SPHERICAL
+, I = 15
+, J = 16
+!
+!                        adams_view_name='Coincidente12'
+JOINT/10
+, PLANAR
+, I = 9
+, J = 10
+!
+!                         adams_view_name='Conc_ntrica4'
+JOINT/11
+, SPHERICAL
+, I = 37
+, J = 38
+!
+!                        adams_view_name='Conc_ntrica17'
+JOINT/12
+, CYLINDRICAL
+, I = 3
+, J = 4
+!
+!                         adams_view_name='Conc_ntrica7'
+JOINT/13
+, SPHERICAL
+, I = 31
+, J = 32
+!
+!                        adams_view_name='Conc_ntrica10'
+JOINT/14
+, SPHERICAL
+, I = 25
+, J = 26
+!
+!                        adams_view_name='Conc_ntrica13'
+JOINT/15
+, SPHERICAL
+, I = 19
+, J = 20
+!
+!                        adams_view_name='Coincidente13'
+JOINT/16
+, PLANAR
+, I = 7
+, J = 8
+!
+!                         adams_view_name='Conc_ntrica5'
+JOINT/17
+, SPHERICAL
+, I = 35
+, J = 36
+!
+!                        adams_view_name='Conc_ntrica18'
+JOINT/18
+, CYLINDRICAL
+, I = 1
+, J = 2
+!
+!                     adams_view_name='RotaryMotor2_RotateZ'
+MOTION/1
+, I = 39
+, J = 40
+, B3
+, FUNCTION = SHF(TIME,0,10D,180D,90D,10D)
+!
+!                     adams_view_name='RotaryMotor3_RotateZ'
+MOTION/2
+, I = 43
+, J = 44
+, B3
+, FUNCTION = SHF(TIME,0,10D,180D,90D,10D)
+!
+!                     adams_view_name='RotaryMotor1_RotateZ'
+MOTION/3
+, I = 41
+, J = 42
+, B3
+, FUNCTION = SHF(TIME,0,10D,180D,90D,10D)
+!
+!------------------------- GRAVITATIONAL ACCELERATION --------------------------
+!
+ACCGRAV/
+, JGRAV = -9.80665
+!
+!----------------------------- ANALYSIS SETTINGS -------------------------------
+!
+INTEGRATOR/
+, GSTIFF
+, ERROR = 1.0E-004
+, PATTERN = T:T:T:T:T:T:T:T:T:T
+, MAXIT = 25
+, HINIT = 1.0E-004
+, HMAX = 0.01
+, HMIN = 1.0E-007
+!
+KINEMATICS/
+, HMAX = 0.01
+!
+EQUILIBRIUM/
+!
+OUTPUT/
+, REQSAVE
+, GRSAVE
+, NOSEPARATOR
+!
+RESULTS/
+, FORMATTED
+, XRF
+!
+PREFERENCES/
+, CONTACT_FACETING_TOLERANCE = 900
+!
+END
