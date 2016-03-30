@@ -1,0 +1,6 @@
+! Adams/View Adams 2015.1 Student Edition (built Dec  8 2015)
+! Graphics:  OpenGL
+! Using software OpenGL overlay plane emulation
+! Enter a command, '?', or 'help'.
+model display model=.intento_unirPartes_mayor_masa_cosimulacion view=all
+! >> model display model=.intento_unirPartes_mayor_masa_cosimulacion view=all
