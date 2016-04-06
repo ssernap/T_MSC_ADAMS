@@ -9,11 +9,11 @@ tf1=2;
 tf2=2;
 tf3=2;
 
-px2i=-40;
-px2f=40;
+px2i=-70;
+px2f=70;
 
-pz1i=200;
-pz1f=160;
+pz1i=-300;
+pz1f=-160;
 
 pz3i=pz1f;
 pz3f=pz1i;

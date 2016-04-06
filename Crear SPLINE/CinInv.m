@@ -1,38 +1,73 @@
-function [ThetaM1,ThetaM2,ThetaM3] = CinInv(Px,Py,Pz)
+function [ThetaM1,ThetaM2,ThetaM3] = CinInv(Px,Py,Pz,AntThetaM1, AntThetaM2, AntThetaM3)
 
-
-h  = 65.25; % 34.5
-r  = 34.47;% 65.5;
-a  = 275; % 130;
-b  = 130; % 275;
-
-% angulos de las juntas
-phi = [ 0+pi/2; 2*pi/3+pi/2; 4*pi/3+pi/2];
-
-% respuesta
 theta = zeros(3,1);
+thetaA = zeros(3,1);
+thetaB = zeros(3,1);
+alpha = [ 0+pi/2; 2*pi/3+pi/2; 4*pi/3+pi/2];
+R  = 65.25; % 34.5
+r  = 34.47;% 65.5;
+L1  = 130; % 130;
+L2  = 275; % 275;
 
-% para cada pata
+R1=R-r;
+Si=1/L1*(-Px^2-Py^2-Pz^2+L2^2-L1^2-R1^2);
 for i=1:3
-    
-    % Cinematica inversa para la primera pata
-    Cxi =  cos(phi(i))*Px + sin(phi(i))*Py + h - r;
-    Cyi = -sin(phi(i))*Px + cos(phi(i))*Py;
-    Czi =  Pz;
-    
-    t3i = acos( Cyi/b );
-    K   = ( Cxi^2 + Cyi^2 + Czi^2 - a^2 - b^2 )/( 2*a*b*sin(t3i) );
-    t2i = acos(K);
-    
-    A = a + b*cos(t2i)*sin(t3i);
-    B = b*sin(t2i)*sin(t3i);
-    sint1i = (A*Czi - B*Cxi) / ( A*A+B*B );
-    cost1i = (A*Cxi + B*Czi) / ( A*A+B*B );
-    
-    theta(i,1) = atan2( sint1i, cost1i );
+Qi=2*Px*cos(alpha(i))+2*Py*sin(alpha(i));
+
+
+S1=-2*Pz-sqrt(4*Pz^2+4*R1^2-Si^2+Qi^2*(1-(R1^2)/(L1^2))+Qi*((-2*R1*Si)/L1-4*R1));
+C1=-2*R1-Qi*(R1/L1-1)-Si;
+
+
+theta(i,1) = atan2( S1, C1 )*2;
+thetaA(i,1) = atan2( S1, C1 )*2;
+thetaB(i,1) = -atan2( S1, -C1 )*2; 
+
+ 
+
+
+ 
+%   while(theta(i,1)<pi/2)
+%  theta(i,1)=theta(i,1)+pi;
+%   end
+%  while(theta(i,1)>(pi/2))
+%  theta(i,1)=theta(i,1)-pi;
+%  end
+
+%  if (thetaA(i,1)>pi/2 || thetaB(i,1)>pi/2)
+%   theta(i,1)=min(thetaA(i,1),thetaB(i,1)) ;  
+%  else
+% theta(i,1)=max(thetaA(i,1),thetaB(i,1));
+%  end
+%  
+%  
+%  
+%  
+%  theta(i,1) = (atan2( -S1, C1 )*2)+10*pi;
+%   while(theta(i,1)<pi)
+%  theta(i,1)=theta(i,1)+pi/2;
+%   end
+%  while(theta(i,1)>(pi))
+%  theta(i,1)=theta(i,1)-pi/2;
+%  end
+
+end
+
+if(abs(thetaA(1,1)-AntThetaM1)<abs(thetaB(1,1)-AntThetaM1))
+  ThetaM1=thetaA(1,1);  
+else
+    ThetaM1=thetaB(1,1);  
 end
 
 
-ThetaM1=-theta(1,1);
-ThetaM2=-theta(2,1);
-ThetaM3=-theta(3,1);
+if(abs(thetaA(2,1)-AntThetaM2)<abs(thetaB(2,1)-AntThetaM2))
+  ThetaM2=thetaA(2,1);  
+else
+    ThetaM2=thetaB(2,1);  
+end
+
+if(abs(thetaA(3,1)-AntThetaM3)<abs(thetaB(3,1)-AntThetaM3))
+  ThetaM3=thetaA(3,1);  
+else
+    ThetaM3=thetaB(3,1);  
+end

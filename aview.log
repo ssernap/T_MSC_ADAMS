@@ -2,5 +2,25 @@
 ! Graphics:  OpenGL
 ! Using software OpenGL overlay plane emulation
 ! Enter a command, '?', or 'help'.
-model display model=.intento_unirPartes_mayor_masa_cosimulacion view=all
-! >> model display model=.intento_unirPartes_mayor_masa_cosimulacion view=all
+! Check changed db now, so that we can suppress the confusing 'continue with read' later
+! Do not do anything before DB_CHANGED() and nothing after file bin read so that DB_CHANGED() is not confused
+if cond=( DB_CHANGED() && db_default(.system_defaults, "model") != (none) )
+   var set var=.mdi.file_menu_tmp_name str=(eval(db_default (.system_defaults, "model").name))
+   if cond=( DB_EXISTS(".mdi.LAST_DATABASE_NAME"))
+      if cond=(!str_is_space(.mdi.LAST_DATABASE_NAME))
+         var set var=.mdi.file_menu_tmp_name str=(eval(.mdi.LAST_DATABASE_NAME))
+      end
+   end
+   var set var = .mdi.file_menu_status &
+      int = (eval(alert("Warning", "Database has changed. Do you want to save database as '"//.mdi.file_menu_tmp_name//"' before proceeding?","Yes","No", "Cancel", 1)))
+   if cond=( .mdi.file_menu_status != 3  && .mdi.file_menu_status != 0)
+      if cond=( .mdi.file_menu_status == 1 )
+         file binary write file = (eval( .mdi.file_menu_tmp_name ))
+      end
+   end
+else
+   var set var=.mdi.file_menu_status int=-1
+end
+if cond=( .mdi.file_menu_status != 3  && .mdi.file_menu_status != 0)
+   file bin read alert=no file="C:\Users\Sebastian\Desktop\Tesis B\T_MSC_ADAMS\intento_all_friccion_SeguirAngulos.bin"
+end
